@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+    color: #181C14;
+    line-height: 1.7;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-size: 16px; /* base size */
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: #181C14;
+}
+
+.logo span {
+    color: #001F3F;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.5rem;
+    letter-spacing: -6px;
+    font-weight: bold;
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1rem;
+    color: #001F3F;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #3C3D37;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: #7EACB5;
+}
+
+section {
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .content {
+    color: white;
+    width: 40%;
+    min-height: 100px;
+    padding: 1rem;
+}
+
+.content h1 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.8rem);
+}
+
+.content h1 span {
+    color: #7EACB5;
+    font-family: "Inria Sans", sans-serif;
+    text-shadow: 11px 7px 38px #6492ce;
+}
+
+.content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text {
+    color: #7EACB5;
+    text-shadow: 0 0 10px #D2E0FB;
+}
+
+.content p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.skills i {
+    margin: 20px;
+    font-size: 25px;
+}
+
+.social-links i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 8px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover {
+    scale: 1.2;
+    color: #7EACB5;
+    background-color: #FFF4EA;
+    filter: drop-shadow(0 0 10px #7EACB5);
+}
+
+.content .button {
+    display: inline-flex;
+    width: 170px;
+    height: 40px;
+    padding: 0.75rem;
+    margin: 15px;
+    text-decoration: none;
+    border: 2px solid #001F3F;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4D7FF;
+    color: #001F3F;
+    font-size: 80%;
+    font-weight: 700;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.content .button:hover {
+    scale: 1.1;
+    color: #001F3F;
+    border: 3px solid #C4D7FF;
+    background-color: transparent;
+    font-weight: 800;
+    box-shadow: 0 0 20px #C4D7FF;
+}
+
+@media (max-width: 884px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-container .content {
+        width: 90%;
+    }
+
+    .main-container .button {
+        margin-top: 15px;
+        padding: 0.5rem;
+    }
+}
